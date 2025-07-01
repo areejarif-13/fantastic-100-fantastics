@@ -1,0 +1,96 @@
+// Online C++ compiler to run C++ program online
+//ms. Write programs that perform calculations, manipulate strings, and make decisions based on boolean values. This will solidify your understanding and prepare you for more complex topics.
+#include <iostream>
+
+#include<string>
+#include<cmath>
+using namespace std;
+void calculation(){
+    int a ,b;
+    char sign;
+    cout <<"Enter num 1:";
+    cin >>a ;
+    cout <<"Enter  num 2:";
+    cin >>b;
+    cout <<"Enter sign:";
+    cin>>sign;
+     switch(sign){
+        case '+':
+        cout <<"="<<a+b<<endl;
+        break;
+        case '-':
+        cout << "="<<a-b<<endl;
+        break;
+        case'x':
+        cout <<"="<<a*b<<endl;
+        break;
+        case'/':
+        cout<<"="<<a/b<<endl;
+        break;
+        default:
+        cout <<"invalid "<<endl;
+     }
+}
+void manipulate_str(){
+    string a,b;
+    int option;
+    cout <<"Enter String :";
+    getline(cin,a);
+    cin.ignore();
+    cout <<"Enter String :";
+
+    getline(cin,b);
+    
+    cout <<"1.Concentation\n"<<"2.Length\n"<<"3.Size\n"<<"4.Access String\n"<<"5.Replacing Char\n"<<"6.Finding\n";
+    cin>>option;
+     switch(option){
+        case 1:
+        cout <<a+b<<endl;
+        break;
+        case 2:
+        cout <<a.length()<<"="<<b.length()<<endl;
+        break;
+        case 3:
+        cout <<a.size()<<"="<<b.size()<<endl;
+        break;
+        case 4:
+        cout<<a[0]<<"="<<a[a.length()-1]<<b[0]<<"="<<b[b.length()-1]<<endl;
+        break;
+        case 5:
+        a[1]='X';
+        b[1]='X';
+        cout <<a<<b<<endl;
+        break;
+        case 6:
+        cout <<a.at(0)<<b.at(1)<<endl;
+        break;
+        
+        default:
+        cout <<"invalid "<<endl;
+     }
+    }
+int main() {
+int option;
+    bool o;
+    do{
+    cout <<"1.Calculation\n"<<"2.Manipualte string\n"<<"\n";
+    cin >> option;
+    switch(option){
+        case 1:
+        calculation();
+        
+         break;
+        case 2:
+        manipulate_str();
+        break;
+        default:
+        cout <<"Invalid"<<endl;
+      
+    }cout <<"Do uwant to countinue?";
+    cin>>o;} while(o);
+
+    return 0;
+}/*More Complex Calculations: Extend the calculation() function to handle more operators (e.g., exponentiation, modulus). Consider using functions from the <cmath> library.
+String Parsing: Write a function that parses a string containing a mathematical expression (e.g., "2 + 3 * 4") and evaluates it. This will involve string manipulation and operator precedence.
+Menu-Driven Program: Create a more elaborate menu with more options for string manipulation (e.g., reversing a string, checking if a string is a palindrome, counting the number of vowels).
+Data Structures: Start experimenting with arrays and vectors to store collections of numbers or strings. Write functions to sort the elements in an array or search for a specific value.*/
