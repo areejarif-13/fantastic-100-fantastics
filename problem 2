@@ -9,6 +9,7 @@ Input: s1 = "bank", s2 = "kanb"
 Output: true
 Explanation: For example, swap the first character with the last character of s2 to make "bank".
 -------------------------------------------------------------------*/
+// Online C++ compiler to run C++ program online
 #include <iostream>
 #include<map>
 using namespace std;
@@ -35,7 +36,11 @@ public:
 };
 int main() {
     Solution s;
-   cout <<s.areAlmostEqual("kelb","blek")<<"is answ\n";
+   if(s.areAlmostEqual("attack","defend")){
+       cout <<" true"<<endl;
+   }else{
+       cout <<" False\n";
+   }
   
     
 
